@@ -6,7 +6,7 @@ Config = {
         HopWhenIdle = true,
         AutoHop = true,
         AutoHopDelay = 60 * 60,
-        FpsBoost = true,
+        FpsBoost = false,
         blackscreen = false
     },
     Items = {
@@ -30,7 +30,15 @@ Config = {
         StayInSea2UntilHaveDarkFragments = true
     }
 }
+32  }
+33  
+    -- COLA AQUI O HUD INTEIRO --
+    local Players = game:GetService("Players")
+    ... (resto do código)
+    print("[BF HUD] loaded!")
 
+34  function cac()
+35      local J = {'Task1', ...
 function cac()
     local J = {'Task1', 'Task2', "Currencies", 'Melees', 'LiveTime', 'DebugLine'}
     local W = {Instances = {}}
