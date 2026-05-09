@@ -1238,7 +1238,7 @@ function cac()
         if os.time() - LastTravel > 60 then
             LastTravel = os.time()
             if X >= 1500 and SeaIndex == 2 then
-                if Config.Settings.StayInSea2UntilHaveDarkFragments and not ScriptStorage.Backpack['Dark Fragment'] then
+                If Config.Settings.StayInSea2Untilif ConfigHaveDarkFragments and not ScriptStorage.Backpack['Dark Fragment'] then
                 elseif not Services.Workspace.Map.IceCastle.Hall.LibraryDoor:FindFirstChild('PhoeyuDoor') then
                     Remotes.CommF_:InvokeServer("TravelZou")
                     SetTask('MainTask', 'Sea Travel | Teleporting to Third Sea')
@@ -1587,7 +1587,7 @@ function cac()
             FunctionsHandler.SecondSeaPuzzle.Methods.Refresh:Call()
             return FunctionsHandler.SecondSeaPuzzle.Methods.Start:Call()
         elseif k == 1 then
-            SetTask('MainTask', "Auto Second Sea - Talk To Detective")
+            SetTask('MainTask', "Auto Second Sea - Talk To Military")
             Remotes.CommF_:InvokeServer('DressrosaQuestProgress', 'Detective')
             Remotes.CommF_:InvokeServer("DressrosaQuestProgress", "Detective")
             task.wait(1)
