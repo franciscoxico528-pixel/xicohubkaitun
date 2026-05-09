@@ -50,7 +50,7 @@ function cac()
     local y = Instance.new("UIStroke")
     local L = Instance.new("TextLabel")
     local b = {}
-    h.Name = "ARYA"
+    h.Name = "XICO"
     h.Parent = game:GetService('CoreGui')
     h.Enabled = true
     h.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -70,7 +70,7 @@ function cac()
     X.BorderColor3 = Color3.fromRGB(0, 0, 0)
     X.BorderSizePixel = 0
     X.Font = Enum.Font.FredokaOne
-    X.Text = "ARYA"
+    X.Text = "XICO HUB"
     local C = Instance.new("UIStroke")
     C.Parent = X
     C.Color = Color3.fromRGB(0, 0, 0)
