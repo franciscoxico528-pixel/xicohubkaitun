@@ -6,7 +6,7 @@ Config = {
         HopWhenIdle = true,
         AutoHop = true,
         AutoHopDelay = 60 * 60,
-        FpsBoost = true,
+        FpsBoost = false,
         blackscreen = false
     },
     Items = {
@@ -50,7 +50,7 @@ function cac()
     local y = Instance.new("UIStroke")
     local L = Instance.new("TextLabel")
     local b = {}
-    h.Name = "XICO HUB"
+    h.Name = "ARYA"
     h.Parent = game:GetService('CoreGui')
     h.Enabled = true
     h.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -70,7 +70,7 @@ function cac()
     X.BorderColor3 = Color3.fromRGB(0, 0, 0)
     X.BorderSizePixel = 0
     X.Font = Enum.Font.FredokaOne
-    X.Text = "XICO"
+    X.Text = "ARYA"
     local C = Instance.new("UIStroke")
     C.Parent = X
     C.Color = Color3.fromRGB(0, 0, 0)
@@ -2663,25 +2663,6 @@ function cac()
         local J, r = xpcall(RefreshTasksData, debug.traceback)
         if not J then Report(r) end
     end
-end
-end
-
--- FPS BOOST AQUI
-if Config.Configuration.FpsBoost then
-    for i,v in pairs(game:GetDescendants()) do
-        if v:IsA("BasePart") then
-            v.Material = Enum.Material.Plastic
-            v.Reflectance = 0
-        elseif v:IsA("Decal") or v:IsA("Texture") then
-            v.Transparency = 1
-        elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
-            v.Enabled = false
-        end
-    end
-
-    game.Lighting.GlobalShadows = false
-    game.Lighting.FogEnd = 9e9
-    settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
 end
 
 cac()
