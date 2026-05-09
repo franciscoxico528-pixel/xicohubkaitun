@@ -1230,7 +1230,9 @@ function cac()
         if os.time() - LastTravel > 60 then
             LastTravel = os.time()
             if X >= 1500 and SeaIndex == 2 then
-                If Config.Settings.StayInSea2Untilif ConfigHaveDarkFragments and not ScriptStorage.Backpack['Dark Fragment'] then
+                if Config.Settings.StayInSea2UntilHaveDarkFragments and not ScriptStorage.Backpack['Dark Fragment'] then
+
+
                 elseif not Services.Workspace.Map.IceCastle.Hall.LibraryDoor:FindFirstChild('PhoeyuDoor') then
                     Remotes.CommF_:InvokeServer("TravelZou")
                     SetTask('MainTask', 'Sea Travel | Teleporting to Third Sea')
