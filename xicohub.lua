@@ -1581,7 +1581,7 @@ function cac()
             FunctionsHandler.SecondSeaPuzzle.Methods.Refresh:Call()
             return FunctionsHandler.SecondSeaPuzzle.Methods.Start:Call()
         elseif k == 1 then
-            SetTask('MainTask', "Auto Second Sea - Talk To Military")
+            SetTask('MainTask', "Auto Second Sea - Talk To Military Detective")
             Remotes.CommF_:InvokeServer('DressrosaQuestProgress', 'Detective')
             Remotes.CommF_:InvokeServer("DressrosaQuestProgress", "Detective")
             task.wait(1)
