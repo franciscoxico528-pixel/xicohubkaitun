@@ -39,7 +39,25 @@ function cac()
     local h = game.Players.LocalPlayer
     repeat
         task.wait()
-    until game.CoreGui
+        until game.CoreGui
+    if Config.Configuration.FpsBoost then
+       task.spawn(function()
+           for _, v in pairs(game.Workspace:GetDescendants()) do
+                if v:IsA("BasePart") then
+                    v.Material = Enum.Material.SmoothPlastic
+                elseif v:IsA("Texture") or v:IsA("Decal") then
+                   v:Destroy()
+                end
+            end
+        end)
+        local function clean(char)
+            local hum = char:WaitForChild("Humanoid", 10)
+            if hum then task.wait(0.5) hum:RemoveAccessories() end
+        end
+        if h.Character then clean(h.Character) end
+
+    end
+
     local h = Instance.new('ScreenGui')
     local X = Instance.new('TextLabel')
     local w = Instance.new("UIStroke")
